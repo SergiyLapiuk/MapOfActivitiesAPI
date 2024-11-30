@@ -87,7 +87,7 @@ app.UseSwaggerUI(c =>
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseHttpsRedirection(); // Використовується тільки в середовищі розробки
+    app.UseHttpsRedirection(); // Використовується тільки в середовищі розробки перевірочка
 }
 
 app.UseStaticFiles();
