@@ -75,7 +75,7 @@ if (!app.Environment.IsDevelopment())
 
 
 app.UseCors("AllowOrigin");
-if (app.Environment.IsDevelopment())
+if (/*app.Environment.IsDevelopment()*/)
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
@@ -86,7 +86,11 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.UseHttpsRedirection();
+if (app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection(); // Використовується тільки в середовищі розробки
+}
+
 app.UseStaticFiles();
 
 app.UseRouting();
