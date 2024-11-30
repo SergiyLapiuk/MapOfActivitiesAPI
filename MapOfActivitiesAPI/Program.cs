@@ -75,14 +75,13 @@ if (!app.Environment.IsDevelopment())
 
 
 app.UseCors("AllowOrigin");
-if (app.Environment.IsDevelopment())
 
 
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "Map API V1");
-    c.RoutePrefix = string.Empty; // ������������� �� ������ ���� ������ ��������� swagger ��� ������� ������ ������� �������
+    c.RoutePrefix = string.Empty;
 });
 
 
