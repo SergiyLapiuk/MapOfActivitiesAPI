@@ -46,7 +46,8 @@ namespace MapOfActivitiesAPI.Services
                 using (var client = new MailKit.Net.Smtp.SmtpClient())
                 {
                     client.CheckCertificateRevocation = false;
-                    await client.ConnectAsync("smtp.gmail.com", 465, true);
+                    //await client.ConnectAsync("smtp.gmail.com", 465, true);
+                    await client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
                     await client.AuthenticateAsync("seruk219@gmail.com", "gjou ahdq wwio nwah");
                     await client.SendAsync(emailMessage);
 
