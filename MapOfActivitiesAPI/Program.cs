@@ -7,7 +7,7 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text;
 using MapOfActivitiesAPI.Services;
 using System.Text.Json.Serialization;
-using MapOfActivitiesAPI.Interfaces;
+using MapOfActivitiesAPI.Interfaces; //111
 
 var builder = WebApplication.CreateBuilder(args);
 
