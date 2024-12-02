@@ -29,7 +29,8 @@ namespace MapOfActivitiesAPI.Services
 
         public async Task SendEmailAsync(string email, string subject, string text, string message)
         {
-            string emailBody = await ReadHtmlFileAsync("Views\\EmailView.html", text, message);
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Views", "EmailView.html");
+            string emailBody = await ReadHtmlFileAsync(filePath, text, message);
             if (emailBody != null)
             {
 
