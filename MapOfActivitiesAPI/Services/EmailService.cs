@@ -29,7 +29,7 @@ namespace MapOfActivitiesAPI.Services
 
         public async Task SendEmailAsync(string email, string subject, string text, string message)
         {
-            string emailBody = await ReadHtmlFileAsync("Views\\EmailView.html", text, message);
+            string emailBody = await ReadHtmlFileAsync("Views/EmailView.html", text, message);
             if (emailBody != null)
             {
 
