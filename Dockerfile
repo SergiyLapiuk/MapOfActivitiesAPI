@@ -27,4 +27,7 @@ WORKDIR /app
 
 COPY --from=publish /app/publish .
 
+# Додаємо Views для доступу до EmailView.html
+COPY MapOfActivitiesAPI/Views ./Views
+
 ENTRYPOINT ["dotnet", "MapOfActivitiesAPI.dll"]
