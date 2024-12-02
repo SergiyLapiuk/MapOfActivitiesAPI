@@ -142,7 +142,7 @@ namespace MapOfActivitiesAPI.Controllers
                 await _context.SaveChangesAsync();
 
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                var callbackUrl = $"http://localhost:9000/#/start-menu?userId={user.Id}&code={code}";
+                var callbackUrl = $"https://sergiylapiuk.github.io/MapOfActivitiesFront/#/start-menu?userId={user.Id}&code={code}";
                 EmailService emailService = new EmailService();
                 await emailService.SendEmailAsync(model.Email, "Confirm your account", "Ваш обліковий запис майже готовий!", callbackUrl);
             }

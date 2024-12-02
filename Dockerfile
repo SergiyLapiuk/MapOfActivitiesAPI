@@ -27,6 +27,4 @@ WORKDIR /app
 
 COPY --from=publish /app/publish .
 
-COPY MapOfActivitiesAPI/Views /app/Views
-
 ENTRYPOINT ["dotnet", "MapOfActivitiesAPI.dll"]
