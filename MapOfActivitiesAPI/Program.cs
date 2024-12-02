@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Swashbuckle.AspNetCore.SwaggerUI;  
+using Swashbuckle.AspNetCore.SwaggerUI;
 using System.Text;
 using MapOfActivitiesAPI.Services;
 using System.Text.Json.Serialization;
@@ -87,7 +87,7 @@ app.UseSwaggerUI(c =>
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseHttpsRedirection(); // Використовується тільки в середовищі розробки
+    app.UseHttpsRedirection(); // Використовується тільки в середовищі розробки перевірочка
 }
 
 app.UseStaticFiles();
